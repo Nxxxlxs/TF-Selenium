@@ -20,3 +20,24 @@ O Selenium é um conjunto de Ferramentas de código aberto usado para testar apl
  
  
  [Fonte](https://tecnoblog.net/responde/o-que-e-selenium-em-programacao/)
+ 
+ 
+ **Exemplo de código em Java utilizando o Selenium WebDriver para o navegador Firefox e JUnit**
+ 
+
+     @Test
+    public void testTextField() {
+     System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver.exe");
+     
+     WebDriver webDriver = new FirefoxDriver();
+     webDriver.manage().window().maximize();
+     webDriver.get("http://www.google.com");
+
+     Assert.assertEquals("Google", webDriver.getTitle());
+
+     webDriver.quit();
+
+    }
+ 
+ 
+ [Clique aqui para acessar página de download das Ferramentas](https://www.selenium.dev/)
